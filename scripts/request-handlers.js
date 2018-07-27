@@ -1,4 +1,4 @@
-const mysql = require("mysql");
+//const mysql = require("mysql");
 const options = require("./connectionOptions.json")
 
 /**
@@ -6,7 +6,7 @@ const options = require("./connectionOptions.json")
 * @param {*} req 
 * @param {*} res 
 */
-function getUsers(req, res) {
+/**function getUsers(req, res) {
     var connection = mysql.createConnection(options);
     connection.connect();
     var query = "SELECT * FROM user";
@@ -19,7 +19,7 @@ function getUsers(req, res) {
     });
 }
 module.exports.getUsers = getUsers;
-
+*/
 
 
 /**
@@ -28,7 +28,7 @@ module.exports.getUsers = getUsers;
  * @param {Object} req
  * @param {Object} res
  */
-
+/** 
 function createUser(req, res) {
     var connection = mysql.createConnection(options);
     connection.connect();
@@ -46,14 +46,14 @@ function createUser(req, res) {
     connection.end();
 }
 module.exports.createUser = createUser;
-
+*/
 
 /**
 * Function that allows to remove a user
 * 
 * @param {Object} req 
 * @param {Object} res 
-*/
+*//**
 function removeUser(req, res) {
     var connection = mysql.createConnection(options);
     connection.connect();
@@ -69,14 +69,14 @@ function removeUser(req, res) {
     connection.end();
 }
 module.exports.removeUser = removeUser;
-
+*/
 
 
 /**
  * Function that returns a list of questions from the DB.
  * @param {*} req 
  * @param {*} res 
- */
+ *//**
 function getQuestions(req, res) {
     var connection = mysql.createConnection(options);
     connection.connect();
@@ -91,14 +91,14 @@ function getQuestions(req, res) {
 }
 module.exports.getQuestions = getQuestions;
 
-
+*/
 /**
  * Function that creates a question in the DB.
  * 
  * @param {Object} req
  * @param {Object} res
  */
-
+/**
 function createQuestion(req, res) {
     var connection = mysql.createConnection(options);
     connection.connect();
@@ -118,14 +118,14 @@ function createQuestion(req, res) {
 }
 module.exports.createQuestion = createQuestion;
 
-
+*/
 /**
 * Function that allows to remove a question
 * 
 * @param {Object} req
 * @param {Object} res
 */
-function removeQuestion(req, res) {
+/**function removeQuestion(req, res) {
     var connection = mysql.createConnection(options);
     connection.connect();
     var sql = mysql.format("DELETE FROM question WHERE id = ?", [req.params.id]);
@@ -140,7 +140,7 @@ function removeQuestion(req, res) {
     connection.end();
 }
 module.exports.removeQuestion = removeQuestion;
-
+*/
 
 
 
@@ -149,7 +149,7 @@ module.exports.removeQuestion = removeQuestion;
     * @param {*} req 
     * @param {*} res 
     */
-function getAnswer(req, res) {
+/**function getAnswer(req, res) {
     var connection = mysql.createConnection(options);
     connection.connect();
     var query = "SELECT * FROM answer JOIN question_answer ON id = answer_id JOIN question ON question_id=question.id WHERE id=answer_id AND question_id = question.id";
@@ -162,7 +162,7 @@ function getAnswer(req, res) {
     });
 }
 module.exports.getAnswer = getAnswer;
-
+*/
 
 /**
  * Function that allows to create an answer to a question
@@ -171,7 +171,7 @@ module.exports.getAnswer = getAnswer;
  * @param {Object} response resposta do servidor
  */
 
-function createAnswer(req, res) {
+/**function createAnswer(req, res) {
     var connection = mysql.createConnection(options);
     connection.connect();
     var content = (req.body.content) ? req.body.content : null;
@@ -189,14 +189,14 @@ function createAnswer(req, res) {
     connection.end();
 }
 module.exports.createAnswer = createAnswer;
-
+*/
 /**
 * Function that allows to remove an answer
 * 
 * @param {Object} req
 * @param {Object} res
 */
-function removeAnswer(req, res) {
+/**function removeAnswer(req, res) {
     var connection = mysql.createConnection(options);
     connection.connect();
     var sql = mysql.format("DELETE FROM answer WHERE id = ?", [req.params.id]);
@@ -212,4 +212,4 @@ function removeAnswer(req, res) {
 }
 module.exports.removeAnswer = removeAnswer;
 
-
+*/
