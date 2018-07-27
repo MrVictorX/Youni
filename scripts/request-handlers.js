@@ -1,5 +1,5 @@
 //const mysql = require("mysql");
-const options = require("./connectionOptions.json")
+//const options = require("./connectionOptions.json")
 
 /**
 * Function to return all users in a list from the DB
