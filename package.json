@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "ejs": "^2.5.6",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "request": "^2.81.0",
@@ -19,12 +20,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MrVictorX/Youni"
+    "url": "git+https://github.com/MrVictorX/Youni.git"
   },
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrVictorX/Youni/issues"
+  },
+  "homepage": "https://github.com/MrVictorX/Youni#readme",
+  "author": ""
 }
