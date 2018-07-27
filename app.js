@@ -3,6 +3,7 @@ const express = require("express");
 const requestHandlers = require("./scripts/request-handlers.js");
 const bodyParser = require("body-parser");
 const app = express();
+const PORT = process.env.PORT || 8081;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,8 +21,8 @@ app.post("/questions", requestHandlers.createQuestion);
 app.delete("/question/:id", requestHandlers.removeQuestion);
 
 app.post("/question/:id/answers", requestHandlers.createAnswer);
-app.delete("/question/:id/answers/:id_a", requestHandlers.createAnswer);
+app.delete("/question/:id/answers/:id_a", requestHandlers.deteleAnswer);
 
-app.listen(8081, function () {
+app.listen(PORT, function () {
     console.log("Server running at http://localhost:8081");
 });
