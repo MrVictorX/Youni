@@ -7,7 +7,7 @@ var fs = require("fs");
 var options = {
     "default": {
         "folder": "www",
-        "document": "Scripts/index.html",
+        "document": "index.html",
         "port": 8081,
         "favicon": ""
     },
