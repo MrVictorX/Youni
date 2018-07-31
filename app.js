@@ -8,7 +8,7 @@ var options = {
     "default": {
         "folder": "www",
         "document": "index.html",
-        "port": 8081,
+        "port": process.env.PORT || 5000,
         "favicon": ""
     },
     "extensions": {

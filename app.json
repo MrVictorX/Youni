@@ -1,6 +1,6 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
+  "name": "Youni: Node.js",
+  "description": "Learning platform for math",
   "repository": "https://github.com/MrVictorX/Youni",
   "keywords": ["node", "express", "heroku"],
   "image": "heroku/nodejs"
