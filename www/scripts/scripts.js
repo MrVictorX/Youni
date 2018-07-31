@@ -70,6 +70,14 @@ function browseMenu() {
     showQuestion();
 }
 
+function vote() {
+    if(document.getElementsByClassName("voted").src === "images/novote.png"){
+        document.getElementsByClassName("voted").src = "images/vote.png";
+    }else{
+        document.getElementsByClassName("voted").src = "images/novote.png";
+    }
+}
+
 /* Question */
 
 Information.prototype.showQuestion = function () {
