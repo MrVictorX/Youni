@@ -61,7 +61,7 @@ http.createServer(function (request, response) {
                 response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
                 response.write("HTTP Status: 404 : NOT FOUND");
             } else {
-                response.writeHead(200, { "Content-Type": mimeType(filename) });
+                response.writeHead(200, { "Content-Type": mimeType(filename.toLowerCase()) });
                 response.write(data);
             }
             response.end();
