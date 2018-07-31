@@ -31,21 +31,21 @@
                     <img id='logo' src='Images/Logo_Site_Asset.png' alt='Youni.png'>
                 </a>
             </li>
-            <li href='#About'>
-                <a id='AboutMenu'>About</a>
+            <li>
+                <a id='HomeMenu' onclick="homeMenu()">Home</a>
             </li>
-            <li href='#Billing'>
-                <a id='BillingMenu'>Billing</a>
+            <li>
+                <a id='BrowseMenu' onclick="browseMenu()">Browse</a>
             </li>
-            <li href='#Contact'>
-                <a id='ContactMenu'>Contact Us</a>
+            <li>
+                <a id='QAMenu' onclick="QAMenu()">Q&A</a>
             </li>
-            <li style='float:right'>
-                <a id='user'>Login</a>
+            <li>
+                <a id='user'>Profile</a>
             </li>
         </ul>
     </nav>
-    <div id='content'>
+    <div id='Home'>
         <div id='About'>
             <h2>An original answer to your question in real time.</h2>
             <pre>Youni, a novel way to provide access to
@@ -98,37 +98,62 @@ of learning, and alternative ways of thinking.</pre>
         </div>
     </div>
 
-    <!--Question forum
-    <nav id='menu'>
-        <ul>
-            <li>
-                <a id='logoMenu'>
-                    <img id='logo' src='Images/Logo Site Asset.png' alt='Youni.png'>
-                </a>
-            </li>
-            <li href='#Home'>
-                <a id='HomeMenu'>Home</a>
-            </li>
-            <li href='#Browse'>
-                <a id='BrowseMenu'>Browse</a>
-            </li>
-            <li href='#QA'>
-                <a id='QAMenu'>Q&A</a>
-            </li>
-            <li href='#Leaderboard'>
-                <a if='LeaderboardMenu'>Leaderboard</a>
-            </li>
-            <li style='float:right'>
-                <a id='user'>Profile</a>
-            </li>
-        </ul>
-    </nav>
-    <div id='content'>
-        <div id='QA'>
-            <h2>Questions</h2>
-        </div>
+
+    <div id="Browse">
+        <h2 style="display: inline">Browse</h2>
+        <button onclick="addQuestion()" style="display: inline;">Upload content</button>
+        <form action="">
+            <input id="search" type="text" placeholder="Search">
+            <input type="text" placeholder="Topics">
+            <input type="text" placeholder="Sort by">
+            <button type="submit">Search</button>
+        </form>
+        <table id="QuestionTable">
+            <tbody>
+                <tr>
+                    <td>15</td>
+                    <td>5</td>
+                    <td class="questionColumn">Question1?</td>
+                    <td class="extraDocs">blergh</td>
+                    <td></td>
+                    <td>voted</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>2</td>
+                    <td class="questionColumn">Question2?</td>
+                    <td class="extraDocs">blergh</td>
+                    <td></td>
+                    <td>voted</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>28</td>
+                    <td class="questionColumn">Question3?</td>
+                    <td class="extraDocs">blergh</td>
+                    <td></td>
+                    <td>voted</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>14</td>
+                    <td class="questionColumn">Question4?</td>
+                    <td class="extraDocs">blergh</td>
+                    <td></td>
+                    <td>voted</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>1</td>
+                    <td class="questionColumn">Question5?</td>
+                    <td class="extraDocs">blergh</td>
+                    <td></td>
+                    <td>voted</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    -->
+
 </body>
 
 </html>

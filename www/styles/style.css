@@ -77,15 +77,15 @@ article{
     font-weight: bold;
 }
 
-#content{
+#Home, #Browse{
     float: right;
     height: 80%;
     width: calc(85% - 20px);
 }
 
 #logo{
-    height: 50px;
-    width: 100px;
+    height: 35px;
+    width: 80px;
 }
 
 #Global{
@@ -98,3 +98,28 @@ article{
     text-align: justify;
 }
 
+#Browse {
+    display: none;
+}
+
+#Browse input {
+    display: inline;
+}
+
+#search {
+    width: 50%;
+}
+
+#Browse table {
+    width: 80%;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.questionColumn {
+    width: 400px;
+}
+
+td {
+    padding: 5px 20px;
+}
