@@ -256,35 +256,45 @@ of learning, and alternative ways of thinking.</pre>
 
     <div id="UploadContent">
         <h2>Upload Content</h2>
-        <form action="browseMenu()" class="questionform">
-            Document Name:
-            <input type="text" placeholder="Enter your document name"> Select content type:
-            <select class="select">
-                <option selected>Choose an option</option>
-                <option value="Image">Image</option>
-                <option value="Video">Video</option>
-                <option value="Audio">Audio</option>
-            </select>
-            <br> Select Topic:
-            <select class="select">
-                <option selected>Choose an option</option>
-            </select>
-            Select Sub-Topic:
-            <select class="select">
-                <option selected>Choose an option</option>
-            </select>
-            <br>
-            <div id="upload">
-                <label for="file-input">
-                    <img src="images/upload.png" style="cursor:pointer; height: 50px; width: 50px;"/>
-                </label>
-                <input id="file-input" type="file"/>Documents uploaded
-                <br>
-                <a class="description">none</a>
+        <form class="uploadForm">
+            <div id="flex1">
+                <label for="docName"> Document Name:</label>
+                <label for="sel1">Select content type:</label>
+            </div><br>
+            <div id="flex2">
+                <input id="docName" type="text" placeholder="Enter your document name">
+                <select id="sel1" class="select">
+                    <option selected>Choose an option</option>
+                    <option value="Image">Image</option>
+                    <option value="Video">Video</option>
+                    <option value="Audio">Audio</option>
+                </select>
             </div>
-            <input type="checkbox" name="anonymous" value="Submit Anonymously">Submit Anonymously
-            <br>
-            <input type="submit" value="submit">
+            <br><br>
+            <div id="flex3">
+                <label for="sel2">Select Topic:</label>
+                <label for="sel3">Select Sub-Topic:</label>
+            </div><br>
+            <div id="flex4">
+                <select id="sel2" class="select">
+                    <option selected>Choose an option</option>
+                </select>
+
+                <select id="sel3" class="select">
+                    <option selected>Choose an option</option>
+                </select>
+            </div>
+            <br><br>
+            <div id="upload" style="margin-left: 20%;">
+                <label for="file-input">
+                    <img src="images/upload.png" style="cursor:pointer; height: 50px; width: 50px;" /> Documents uploaded
+                    <a class="description">none</a>
+                </label>
+                <input id="file-input" type="file" />
+            </div><br><br>
+            <input style="margin-left: 20%;" type="checkbox" name="anonymous" value="Submit Anonymously">Submit Anonymously
+            <br><br><br>
+            <input style="margin-left: 20%;" type="button" value="submit" onclick="browseMenu()">
         </form>
     </div>
 
