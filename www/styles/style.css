@@ -121,6 +121,10 @@ td {
     table-layout: fixed;
 }
 
+#upload input {
+    display: none;
+}
+
 .questionColumn {
     text-align: left;
     width: 350px;

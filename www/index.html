@@ -127,14 +127,15 @@ of learning, and alternative ways of thinking.</pre>
                         <br>
                         <a class="description">votes</a>
                     </td>
-                    <td class="questionColumn"><a class="contentHeader" onclick="showContent()">Linear continuation notes</a>
+                    <td class="questionColumn">
+                        <a class="contentHeader" onclick="showContent()">Linear continuation notes</a>
                         <br>
-                        <a class="description">Topic | Subtopic</a>
+                        <a class="description">Topic | Sub-Topic</a>
                     </td>
                     <td class="extraDocs">
                         <img src="images/image.png" alt="image.png">
                         <img src="images/novideo.png" alt="video.png">
-                        <img src="images/audio.png" alt="audio.png">
+                        <img src="images/noaudio.png" alt="audio.png">
                     </td>
                     <td></td>
                     <td class="voted">
@@ -152,9 +153,10 @@ of learning, and alternative ways of thinking.</pre>
                         <br>
                         <a class="description">votes</a>
                     </td>
-                    <td class="questionColumn"><a class="contentHeader">Macro economic notes</a>
+                    <td class="questionColumn">
+                        <a class="contentHeader">Macro economic notes</a>
                         <br>
-                        <a class="description">Topic | Subtopic</a>
+                        <a class="description">Topic | Sub-Topic</a>
                     </td>
                     <td class="extraDocs">
                         <img src="/images/image.png" alt="image.png">
@@ -177,9 +179,10 @@ of learning, and alternative ways of thinking.</pre>
                         <br>
                         <a class="description">votes</a>
                     </td>
-                    <td class="questionColumn"><a class="contentHeader">Micro economics</a>
+                    <td class="questionColumn">
+                        <a class="contentHeader">Micro economics</a>
                         <br>
-                        <a class="description">Topic | Subtopic</a>
+                        <a class="description">Topic | Sub-Topic</a>
                     </td>
                     <td class="extraDocs">
                         <img src="/images/noimage.png" alt="image.png">
@@ -202,9 +205,10 @@ of learning, and alternative ways of thinking.</pre>
                         <br>
                         <a class="description">votes</a>
                     </td>
-                    <td class="questionColumn"><a class="contentHeader">Suply and Demand notes</a>
+                    <td class="questionColumn">
+                        <a class="contentHeader">Suply and Demand notes</a>
                         <br>
-                        <a class="description">Topic | Subtopic</a>
+                        <a class="description">Topic | Sub-Topic</a>
                     </td>
                     <td class="extraDocs">
                         <img src="/images/noimage.png" alt="image.png">
@@ -227,9 +231,10 @@ of learning, and alternative ways of thinking.</pre>
                         <br>
                         <a class="description">votes</a>
                     </td>
-                    <td class="questionColumn"><a class="contentHeader">Programming pattern notes</a>
+                    <td class="questionColumn">
+                        <a class="contentHeader">Programming pattern notes</a>
                         <br>
-                        <a class="description">Topic | Subtopic</a>
+                        <a class="description">Topic | Sub-Topic</a>
                     </td>
                     <td class="extraDocs">
                         <img src="/images/image.png" alt="image.png">
@@ -247,12 +252,40 @@ of learning, and alternative ways of thinking.</pre>
 
     <div id="showContent">
         <h2>Linear continuation notes</h2>
-        content info here
     </div>
 
     <div id="UploadContent">
         <h2>Upload Content</h2>
-        content form here...
+        <form action="browseMenu()" class="questionform">
+            Document Name:
+            <input type="text" placeholder="Enter your document name"> Select content type:
+            <select class="select">
+                <option selected>Choose an option</option>
+                <option value="Image">Image</option>
+                <option value="Video">Video</option>
+                <option value="Audio">Audio</option>
+            </select>
+            <br> Select Topic:
+            <select class="select">
+                <option selected>Choose an option</option>
+            </select>
+            Select Sub-Topic:
+            <select class="select">
+                <option selected>Choose an option</option>
+            </select>
+            <br>
+            <div id="upload">
+                <label for="file-input">
+                    <img src="images/upload.png" style="cursor:pointer; height: 50px; width: 50px;"/>
+                </label>
+                <input id="file-input" type="file"/>Documents uploaded
+                <br>
+                <a class="description">none</a>
+            </div>
+            <input type="checkbox" name="anonymous" value="Submit Anonymously">Submit Anonymously
+            <br>
+            <input type="submit" value="submit">
+        </form>
     </div>
 
     <div id="QA">
