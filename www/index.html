@@ -100,17 +100,19 @@ of learning, and alternative ways of thinking.</pre>
 
 
     <div id="Browse">
-        <h2 style="display: inline">Browse</h2>
-        <button onclick="addQuestion()" style="display: inline; margin-left: 80.55%">Upload content</button>
-        <form action="">
+        <div style="margin-bottom: 20px; justify-content: space-between;">
+            <h2 style="display: inline">Browse</h2>
+            <button class="buttons" onclick="uploadContentPage()" style="display: inline; margin-left: 83.4%">Upload content</button>
+        </div>
+        <form class="questionform" action="">
             <input id="search" type="text" placeholder="Search">
             <input type="text" placeholder="Topics">
-            <select class="select">
+            <select style="display: none" class="select">
                 <option selected>Sort by</option>
                 <option value="Views">Views</option>
                 <option value="Votes">Votes</option>
             </select>
-            <button type="submit">Search</button>
+            <button class="buttons" type="submit">Search</button>
         </form>
         <table id="QuestionTable">
             <tbody>
@@ -125,15 +127,18 @@ of learning, and alternative ways of thinking.</pre>
                         <br>
                         <a class="description">votes</a>
                     </td>
-                    <td class="questionColumn">Question1?<br><a class="description">Topic | Subtopic</a></td>
+                    <td class="questionColumn"><a class="contentHeader" onclick="showContent()">Linear continuation notes</a>
+                        <br>
+                        <a class="description">Topic | Subtopic</a>
+                    </td>
                     <td class="extraDocs">
-                        <img src="images/noimage.png" alt="image.png">
+                        <img src="images/image.png" alt="image.png">
                         <img src="images/novideo.png" alt="video.png">
-                        <img src="images/noaudio.png" alt="audio.png">
+                        <img src="images/audio.png" alt="audio.png">
                     </td>
                     <td></td>
                     <td class="voted">
-                        <img src="images/novote.png" alt="star.png" onclick="voted()">
+                        <img id="vote1" src="images/novote.png" alt="star.png" onclick="this.src='images/voted.png'">
                     </td>
                 </tr>
                 <tr>
@@ -147,7 +152,10 @@ of learning, and alternative ways of thinking.</pre>
                         <br>
                         <a class="description">votes</a>
                     </td>
-                    <td class="questionColumn">Question2?<br><a class="description">Topic | Subtopic</a></td>
+                    <td class="questionColumn"><a class="contentHeader">Macro economic notes</a>
+                        <br>
+                        <a class="description">Topic | Subtopic</a>
+                    </td>
                     <td class="extraDocs">
                         <img src="/images/image.png" alt="image.png">
                         <img src="/images/novideo.png" alt="video.png">
@@ -155,7 +163,7 @@ of learning, and alternative ways of thinking.</pre>
                     </td>
                     <td></td>
                     <td class="voted">
-                        <img src="/images/novote.png" alt="star.png">
+                        <img id="vote2" src="/images/novote.png" alt="star.png" onclick="this.src='images/voted.png'">
                     </td>
                 </tr>
                 <tr>
@@ -169,7 +177,10 @@ of learning, and alternative ways of thinking.</pre>
                         <br>
                         <a class="description">votes</a>
                     </td>
-                    <td class="questionColumn">Question3?<br><a class="description">Topic | Subtopic</a></td>
+                    <td class="questionColumn"><a class="contentHeader">Micro economics</a>
+                        <br>
+                        <a class="description">Topic | Subtopic</a>
+                    </td>
                     <td class="extraDocs">
                         <img src="/images/noimage.png" alt="image.png">
                         <img src="/images/video.png" alt="video.png">
@@ -177,7 +188,7 @@ of learning, and alternative ways of thinking.</pre>
                     </td>
                     <td></td>
                     <td class="voted">
-                        <img src="/images/novote.png" alt="star.png">
+                        <img id="vote3" src="/images/novote.png" alt="star.png" onclick="this.src='images/voted.png'">
                     </td>
                 </tr>
                 <tr>
@@ -191,7 +202,10 @@ of learning, and alternative ways of thinking.</pre>
                         <br>
                         <a class="description">votes</a>
                     </td>
-                    <td class="questionColumn">Question4?<br><a class="description">Topic | Subtopic</a></td>
+                    <td class="questionColumn"><a class="contentHeader">Suply and Demand notes</a>
+                        <br>
+                        <a class="description">Topic | Subtopic</a>
+                    </td>
                     <td class="extraDocs">
                         <img src="/images/noimage.png" alt="image.png">
                         <img src="/images/novideo.png" alt="video.png">
@@ -199,7 +213,7 @@ of learning, and alternative ways of thinking.</pre>
                     </td>
                     <td></td>
                     <td class="voted">
-                        <img src="/images/novote.png" alt="star.png">
+                        <img id="vote4" src="/images/novote.png" alt="star.png" onclick="this.src='images/voted.png'">
                     </td>
                 </tr>
                 <tr>
@@ -213,21 +227,53 @@ of learning, and alternative ways of thinking.</pre>
                         <br>
                         <a class="description">votes</a>
                     </td>
-                    <td class="questionColumn">Question5?<br><a class="description">Topic | Subtopic</a></td>
+                    <td class="questionColumn"><a class="contentHeader">Programming pattern notes</a>
+                        <br>
+                        <a class="description">Topic | Subtopic</a>
+                    </td>
                     <td class="extraDocs">
-                        <img src="/images/noimage.png" alt="image.png">
+                        <img src="/images/image.png" alt="image.png">
                         <img src="/images/novideo.png" alt="video.png">
                         <img src="/images/noaudio.png" alt="audio.png">
                     </td>
                     <td></td>
                     <td class="voted">
-                        <img src="images/novote.png" alt="star.png">
+                        <img id="vote5" src="images/novote.png" alt="star.png" onclick="this.src='images/voted.png'">
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
 
+    <div id="showContent">
+        <h2>Linear continuation notes</h2>
+        content info here
+    </div>
+
+    <div id="UploadContent">
+        <h2>Upload Content</h2>
+        content form here...
+    </div>
+
+    <div id="QA">
+        <h2>QA</h2>
+        Question list here...
+    </div>
+
+    <div id="showQ">
+        <h2>Question1?</h2>
+        Question content and answer list here...
+    </div>
+
+    <div id="UploadQuestion">
+        <h2>Upload Question</h2>
+        question form here...
+    </div>
+
+    <div id="UploadAnswer">
+        <h2>Upload Answer</h2>
+        answer form here...
+    </div>
 </body>
 
 </html>

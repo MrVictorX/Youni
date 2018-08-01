@@ -79,9 +79,10 @@ td {
     position: relative;
     color: #000;
     font-weight: bold;
+    cursor:pointer;
 }
 
-#Home, #Browse{
+#Home, #Browse, #showContent, #UploadContent, #QA, #showQ, #UploadQuestion, #UploadAnswer{
     padding-left: 5%;
     height: 80%;
     width: calc(90% - 20px);
@@ -102,7 +103,7 @@ td {
     text-align: justify;
 }
 
-#Browse {
+#Browse, #UploadContent, #QA, #UploadQuestion, #UploadAnswer{
     display: none;
 }
 
@@ -126,6 +127,11 @@ td {
     font-weight: bold;
 }
 
+.questionColumn .contentHeader:hover{
+    font-size: 110%;
+    cursor: pointer;
+}
+
 .extraDocs{
     width: 160px;    
 }
@@ -140,6 +146,7 @@ td {
 .voted img {
     height: 50px;
     width: 50px;
+    cursor:pointer;
 }
 
 .number {
@@ -153,3 +160,15 @@ td {
     font-weight: normal;
 }
 
+.buttons{
+    border: none;
+    background: #dddddd;
+    padding: 6px 12px;
+    cursor:pointer;
+}
+
+.questionform{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

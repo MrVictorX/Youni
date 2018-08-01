@@ -62,68 +62,87 @@ Information.prototype.createTestAnswers = function () {
 function homeMenu() {
     document.getElementById("Home").style.display = 'block';
     document.getElementById("Browse").style.display = 'none';
+    document.getElementById("UploadContent").style.display = 'none';
+    document.getElementById("showContent").style.display = 'none';
+    document.getElementById("QA").style.display = 'none';
+    document.getElementById("showQ").style.display = 'none';
+    document.getElementById("UploadQuestion").style.display = 'none';
+    document.getElementById("UploadAnswer").style.display = 'none';
 }
 
 function browseMenu() {
     document.getElementById("Home").style.display = 'none';
     document.getElementById("Browse").style.display = 'block';
-    showQuestion();
+    document.getElementById("UploadContent").style.display = 'none';
+    document.getElementById("showContent").style.display = 'none';
+    document.getElementById("QA").style.display = 'none';
+    document.getElementById("showQ").style.display = 'none';
+    document.getElementById("UploadQuestion").style.display = 'none';
+    document.getElementById("UploadAnswer").style.display = 'none';
 }
 
-function vote() {
-    if(document.getElementsByClassName("voted").src === "images/novote.png"){
-        document.getElementsByClassName("voted").src = "images/vote.png";
-    }else{
-        document.getElementsByClassName("voted").src = "images/novote.png";
-    }
+function uploadContentPage() {
+    document.getElementById("Home").style.display = 'none';
+    document.getElementById("Browse").style.display = 'none';
+    document.getElementById("UploadContent").style.display = 'block';
+    document.getElementById("showContent").style.display = 'none';
+    document.getElementById("QA").style.display = 'none';
+    document.getElementById("showQ").style.display = 'none';
+    document.getElementById("UploadQuestion").style.display = 'none';
+    document.getElementById("UploadAnswer").style.display = 'none';
 }
 
-/* Question */
+function showContent() {
+    document.getElementById("Home").style.display = 'none';
+    document.getElementById("Browse").style.display = 'none';
+    document.getElementById("UploadContent").style.display = 'none';
+    document.getElementById("showContent").style.display = 'block';
+    document.getElementById("QA").style.display = 'none';
+    document.getElementById("showQ").style.display = 'none';
+    document.getElementById("UploadQuestion").style.display = 'none';
+    document.getElementById("UploadAnswer").style.display = 'none';
+}
 
-Information.prototype.showQuestion = function () {
-    var div = document.getElementById("QuestionBlocks");
-    while (div.firstChild) {
-        div.removeChild(div.firstChild);
-    }
-    for (var i = 0; i < info.questions.length; i++) {
-        div.appendChild(this.questions[i]);
-    }
-};
+function QAMenu(){
+    document.getElementById("Home").style.display = 'none';
+    document.getElementById("Browse").style.display = 'none';
+    document.getElementById("UploadContent").style.display = 'none';
+    document.getElementById("showContent").style.display = 'none';
+    document.getElementById("QA").style.display = 'block';
+    document.getElementById("showQ").style.display = 'none';
+    document.getElementById("UploadQuestion").style.display = 'none';
+    document.getElementById("UploadAnswer").style.display = 'none';
+}
 
-/* FUNÇOES AUXILIARES */
+function showQ(){
+    document.getElementById("Home").style.display = 'none';
+    document.getElementById("Browse").style.display = 'none';
+    document.getElementById("UploadContent").style.display = 'none';
+    document.getElementById("showContent").style.display = 'none';
+    document.getElementById("QA").style.display = 'none';
+    document.getElementById("showQ").style.display = 'block';
+    document.getElementById("UploadQuestion").style.display = 'none';
+    document.getElementById("UploadAnswer").style.display = 'none';
+}
 
-/**
- * Função que recebe um qualquer objeto e retorna dinamicamente uma linha de tabela HTML com informação relativa ao estado das suas propriedades
- * @param {Object} object - objecto do qual vamos transformar o conteudo dos seus atributos em TD
- */
+function uploadQuestion(){
+    document.getElementById("Home").style.display = 'none';
+    document.getElementById("Browse").style.display = 'none';
+    document.getElementById("UploadContent").style.display = 'none';
+    document.getElementById("showContent").style.display = 'none';
+    document.getElementById("QA").style.display = 'none';
+    document.getElementById("showQ").style.display = 'none';
+    document.getElementById("UploadQuestion").style.display = 'block';
+    document.getElementById("UploadAnswer").style.display = 'none';
+}
 
-function tableLine(object) {
-    var tr = document.createElement("tr");
-    tr.appendChild(createCellCheckbox());
-    for (var property in object) {
-        if ((object[property] instanceof Function) === false) {
-            var td = document.createElement("td");
-            td.textContent = object[property];
-            tr.appendChild(td);
-        }
-    }
-    return tr;
-};
-
-
-var inTableQuestion = function (question) {
-    var topElement = document.createElement("tr");
-    var answerCount = 0;
-    for (var i = 0; i < info.answers.length; i++) {
-        if (info.answers[i].question.id === question.id) {
-            answerCount++;
-        }
-    }
-    var fields = [question.id, question.content, question.document, question.votes, question.anounymous, question.user, answerCount];
-    fields.forEach(function (current) {
-        var fieldElement = document.createElement("td");
-        fieldElement.textContent = current;
-        topElement.appendChild(fieldElement);
-    })
-    return topElement;
-};
+function uploadAnswer(){
+    document.getElementById("Home").style.display = 'none';
+    document.getElementById("Browse").style.display = 'none';
+    document.getElementById("UploadContent").style.display = 'none';
+    document.getElementById("showContent").style.display = 'none';
+    document.getElementById("QA").style.display = 'none';
+    document.getElementById("showQ").style.display = 'none';
+    document.getElementById("UploadQuestion").style.display = 'none';
+    document.getElementById("UploadAnswer").style.display = 'block';
+}
