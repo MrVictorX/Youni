@@ -105,7 +105,7 @@ of learning, and alternative ways of thinking.</pre>
             <button class="buttons" onclick="uploadContentPage()" style="display: inline; margin-left: 83.4%">Upload content</button>
         </div>
         <form class="questionform" action="">
-            <input id="search" type="text" placeholder="Search">
+            <input class="search" type="text" placeholder="Search">
             <input type="text" placeholder="Topics">
             <select style="display: none" class="select">
                 <option selected>Sort by</option>
@@ -114,7 +114,7 @@ of learning, and alternative ways of thinking.</pre>
             </select>
             <button class="buttons" type="submit">Search</button>
         </form>
-        <table id="QuestionTable">
+        <table class="QuestionTable">
             <tbody>
                 <tr>
                     <td>
@@ -252,6 +252,7 @@ of learning, and alternative ways of thinking.</pre>
 
     <div id="showContent">
         <h2>Linear continuation notes</h2>
+
     </div>
 
     <div id="UploadContent">
@@ -283,14 +284,160 @@ of learning, and alternative ways of thinking.</pre>
                 <input id="file-input" type="file" />
             </div>
             <div id="anonymousCheck">
-            <input type="checkbox" name="anonymous" value="Submit Anonymously">Submit Anonymously</div>
+                <input type="checkbox" name="anonymous" value="Submit Anonymously">Submit Anonymously</div>
             <input style="width: 100px;" type="button" value="submit" onclick="browseMenu()">
         </form>
     </div>
 
     <div id="QA">
-        <h2>QA</h2>
-        Question list here...
+        <div style="margin-bottom: 20px; justify-content: space-between;">
+            <h2 style="display: inline">Q&A</h2>
+            <button class="buttons" onclick="uploadQuestion()" style="display: inline; margin-left: 85.3%">Make a Question</button>
+        </div>
+        <form class="questionform" action="">
+            <input class="search" type="text" placeholder="Search">
+            <input type="text" placeholder="Topics">
+            <select style="display: none" class="select">
+                <option selected>Sort by</option>
+                <option value="Views">Views</option>
+                <option value="Votes">Votes</option>
+            </select>
+            <button class="buttons" type="submit">Search</button>
+        </form>
+        <table class="QuestionTable">
+            <tbody>
+                <tr>
+                    <td>
+                        <a class="number">15</a>
+                        <br>
+                        <a class="description">views</a>
+                    </td>
+                    <td>
+                        <a class="number">2</a>
+                        <br>
+                        <a class="description">Answers</a>
+                    </td>
+                    <td>
+                        <a class="number">5</a>
+                        <br>
+                        <a class="description">votes</a>
+                    </td>
+                    <td class="questionColumn">
+                        <a class="contentHeader" onclick="showQ()">Question1?</a>
+                        <br>
+                        <a class="description">Topic | Sub-Topic</a>
+                    </td>
+                    <td></td>
+                    <td class="voted">
+                        <img id="vote1" src="images/novote.png" alt="star.png" onclick="this.src='images/voted.png'">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="number">5</a>
+                        <br>
+                        <a class="description">views</a>
+                    </td>
+                    <td>
+                        <a class="number">0</a>
+                        <br>
+                        <a class="description">Answers</a>
+                    </td>
+                    <td>
+                        <a class="number">2</a>
+                        <br>
+                        <a class="description">votes</a>
+                    </td>
+                    <td class="questionColumn">
+                        <a class="contentHeader">Question2?</a>
+                        <br>
+                        <a class="description">Topic | Sub-Topic</a>
+                    </td>
+                    <td></td>
+                    <td class="voted">
+                        <img id="vote2" src="/images/novote.png" alt="star.png" onclick="this.src='images/voted.png'">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="number">50</a>
+                        <br>
+                        <a class="description">views</a>
+                    </td>
+                    <td>
+                        <a class="number">6</a>
+                        <br>
+                        <a class="description">Answers</a>
+                    </td>
+                    <td>
+                        <a class="number">28</a>
+                        <br>
+                        <a class="description">votes</a>
+                    </td>
+                    <td class="questionColumn">
+                        <a class="contentHeader">Question3?</a>
+                        <br>
+                        <a class="description">Topic | Sub-Topic</a>
+                    </td>
+                    <td></td>
+                    <td class="voted">
+                        <img id="vote3" src="/images/novote.png" alt="star.png" onclick="this.src='images/voted.png'">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="number">23</a>
+                        <br>
+                        <a class="description">views</a>
+                    </td>
+                    <td>
+                        <a class="number">3</a>
+                        <br>
+                        <a class="description">Answers</a>
+                    </td>
+                    <td>
+                        <a class="number">14</a>
+                        <br>
+                        <a class="description">votes</a>
+                    </td>
+                    <td class="questionColumn">
+                        <a class="contentHeader">Question4?</a>
+                        <br>
+                        <a class="description">Topic | Sub-Topic</a>
+                    </td>
+                    <td></td>
+                    <td class="voted">
+                        <img id="vote4" src="/images/novote.png" alt="star.png" onclick="this.src='images/voted.png'">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="number">16</a>
+                        <br>
+                        <a class="description">views</a>
+                    </td>
+                    <td>
+                        <a class="number">1</a>
+                        <br>
+                        <a class="description">Answers</a>
+                    </td>
+                    <td>
+                        <a class="number">1</a>
+                        <br>
+                        <a class="description">votes</a>
+                    </td>
+                    <td class="questionColumn">
+                        <a class="contentHeader">Question5?</a>
+                        <br>
+                        <a class="description">Topic | Sub-Topic</a>
+                    </td>
+                    <td></td>
+                    <td class="voted">
+                        <img id="vote5" src="images/novote.png" alt="star.png" onclick="this.src='images/voted.png'">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <div id="showQ">
